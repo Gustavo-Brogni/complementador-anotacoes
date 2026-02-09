@@ -2,13 +2,8 @@
 
 An intelligent system that uses a local AI (LM Studio) to enhance class notes with complementary information, summaries, quizzes, and flashcards based on context and user preferences.
 
-<!-- Language -->
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
-
-<!-- Status -->
 ![Status](https://img.shields.io/badge/status-active-success.svg)
-
-<!-- Licença -->
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## Current Status
