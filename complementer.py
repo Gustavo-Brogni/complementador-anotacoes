@@ -11,7 +11,10 @@ Date: February 2026
 
 import requests
 import sys
+import pdfplumber
 from typing import Optional
+from pathlib import Path
+from docx import Document
 from config import API_URL, MAX_CHARS, TEMPERATURE, MAX_TOKENS, OUTPUT_FILE, LANGUAGES, MODES
 
 def get_files() -> list[str]:
@@ -92,15 +95,15 @@ def read_docx(file_path: str) -> str:
 
 def read_files(file_list: list[str]) -> str:
     """
-    Reads the files contents.
+    Detects extension, calls function based on it,
+    and concatenates the result.
 
     Args:
-        file_list: List of files user wants to ead.
+        file_list: List of files user wants to process.
 
     Returns:
         str: Concatenated content from all files.
     """
-
     notes_contents = ""
 
     for file in file_list:
