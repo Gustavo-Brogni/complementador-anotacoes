@@ -69,7 +69,8 @@ def read_pdf(file_path: str) -> str:
     with pdfplumber.open(file_path) as pdf:
         for page in pdf.pages:
             text = page.extract_text()
-            file_content += text
+            if text is not None:
+                file_content += text
 
     return file_content
 
